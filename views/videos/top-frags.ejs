@@ -1,0 +1,86 @@
+<% layout('layouts/layout') -%>
+<div class="row">
+<div class="col-md-12">
+                      <div class="panel panel-danger">
+
+                        <div class="panel-body">
+                          <ul role="tablist" class="nav nav-tabs"><li class="dropdown pull-right tabdrop hide"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-align-justify"></i> <b class="caret"></b></a><ul class="dropdown-menu"></ul></li>
+                            <li role="presentation" class="active"><a href="#this-month" aria-controls="this-month" role="tab" data-toggle="tab" aria-expanded="true">This Month</a></li>
+                            <li role="presentation" class=""><a href="#managers" aria-controls="managers" role="tab" data-toggle="tab" aria-expanded="false">Managers</a></li>
+                            <li role="presentation" class=""><a href="#admins" aria-controls="admins" role="tab" data-toggle="tab" aria-expanded="false">Admins</a></li>
+                          </ul>
+                          <div class="tab-content">
+                            <div id="this-month" role="tabpanel" class="tab-pane active">
+                              <div class="container-fluid half-padding">
+                                <div class="pages pages_dashboard">
+
+                              <% for(var i = 0; i < categorySort.length; i++) { %>
+                                    <div class="col-md-3">
+                                      <div class="panel panel-warning">
+
+                                        <div class="panel-heading">
+                                          <h3 class="panel-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"># <b><%= numbers[i]%> - </b> <%= categorySort[i].title %></h3>
+                                        </div>
+                                        <div class="users-preview__cont1">
+                                        <span data-id="<%= categorySort[i].videoLink %>" data-target="magnificPopup" data-thumbnail="maxresdefault" class="demo04"></span>
+
+                                        <div class="users-preview__props1" style="padding:10px;">
+                                    <div title="Location" class="users-preview__prop"><span class="users-preview__location"><div style="color:white;" class="ov-widget__value"><i style="color: #ed4949;" class="fa fa-heart"></i><%= categorySort[i].votes %></span></div></span></div>
+                                    <div class="users-preview__prop"><i class="fa fa-cubes"></i><span class="users-preview__date">Category: <%= categorySort[i].category %></span></div>
+                                      </div>
+
+
+                                      </div>
+                                    </div>
+                                    </div>
+                              <% } %>
+                                </div>
+                              </div>
+
+
+                            </div>
+                            <div id="managers" role="tabpanel" class="tab-pane">
+                              <p>Morbi vulputate, lectus sit amet fermentum blandit, risus est fringilla tortor, sit amet dictum mi magna eu est. Fusce mollis iaculis purus rutrum suscipit. Donec adipiscing tortor a velit luctus sit amet interdum dolor fermentum. Aliquam consectetur nulla sit amet dui viverra at pretium turpis rhoncus.</p>
+                            </div>
+                            <div id="admins" role="tabpanel" class="tab-pane">
+                              <p>Suspendisse malesuada neque vitae justo auctor imperdiet. Quisque eleifend luctus neque a blandit. Nulla id nunc a est varius molestie sit amet ac mi. Proin tortor est, hendrerit sit amet auctor non, venenatis a metus. Curabitur sit amet lobortis nisl. Sed eget felis sed mi consequat vehicula sit amet sed urna.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+<!--<div class="container-fluid half-padding">
+  <div class="pages pages_dashboard">
+    <div class="row">
+
+<% for(var i = 0; i < categorySort.length; i++) { %>
+      <div class="col-md-3">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title"># <b><%= numbers[i]%> - </b> <%= categorySort[i].title %></h3>
+          </div>
+          <span data-id="<%= categorySort[i].videoLink %>" data-target="magnificPopup" class="demo01"></span>
+
+<div class="wrapper-rating">
+          <div class="sp-widget__info" style="margin-bottom:10px;">
+          <div class="sp-widget__title"><i style="margin-left:15px;color:#eb3232;margin-right:10px;" class="fa fa-crosshairs"></i><span class="frag-style">Frag By: <%= categorySort[i].videoLink %></span></div>
+          </div>
+
+
+          <button type="button" style="margin-bottom:10px;" class="btn btn-success"><i class="fa fa-thumbs-up" style="font-size:12px;" aria-hidden="true"></i></button>
+
+
+
+          <button type="button" style="margin-bottom:10px;" class="btn btn-danger"><i class="fa fa-thumbs-down" style="font-size:12px;" aria-hidden="true"></i></button>
+</div>
+
+
+        </div>
+      </div>
+<% } %>
+    </div>
+  </div>
+</div>
+-->

@@ -1,0 +1,154 @@
+<% layout('layouts/layout') -%>
+
+
+<div class="container-fluid half-padding">
+  <div class="pages pages_dashboard">
+    <div class="row">
+      <div class="col-md-9">
+                      <div class="panel panel-danger">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Overview | Showing Top 3</h3>
+                        </div>
+                        <div class="panel-body">
+
+                  <% for(var i = 0; i < top3.length; i++) { %>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+                      <div class="users-preview datalist-preview">
+                        <div class="users-preview__cont">
+                          <div class="users-preview__name"># <%= numbers[i] %></div>
+                            <div class="users-preview__position" title="Customer" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><%= top3[i].title %></div>
+
+                          <span data-id="<%= top3[i].videoLink %>" data-target="magnificPopup" data-thumbnail="maxresdefault" class="demo03"></span>
+
+
+                          <div class="users-preview__props">
+                            <div title="Location" class="users-preview__prop"><span class="users-preview__location"><div style="color:white;" class="ov-widget__value"><i style="color: #ed4949;" class="fa fa-heart"></i> <%= top3[i].votes %></div></span></div>
+                            <div class="users-preview__prop"><i class="fa fa-cubes"></i><span class="users-preview__date">Category: <%= top3[i].category %></span></div>
+                            <div class="users-preview__prop"><i class="fa fa-address-card-o"></i><span class="users-preview__status" title="Inactive">By </span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <% } %>
+                    <div class="col-md-6">
+                          <div class="panel panel-warning">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">Prices &amp; Awards:</h3>
+                            </div>
+                            <div class="feed-widget" style="height: 250px;background-color: #2a2f34;">
+                              <div class="scroll-wrapper feed-widget__wrap scrollable scrollbar-macosx" style="position: relative;"><div class="feed-widget__wrap scrollable scrollbar-macosx scroll-content" style="height: 252px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
+                                <div class="feed-widget__cont">
+                                  <div class="feed-widget__list">
+                                    <div class="feed-widget__item feed-widget__item_chart">
+                                      <div class="feed-widget__ico"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                                      <div class="feed-widget__info">
+                                        <div class="feed-widget__text"><b><a style="color:#fff;" href="./"># 1 - </a></b> <strong style="color:#fed42a;text-transform: uppercase;">M4A4 | Buzz Kill | StatTrak Factory New</strong></div>
+                                        <div class="feed-widget__date">Worth: 225,97€</div>
+                                      </div>
+                                    </div>
+                                    <div class="feed-widget__item feed-widget__item_chart">
+                                      <div class="feed-widget__ico"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                                      <div class="feed-widget__info">
+                                        <div class="feed-widget__text"><b><a style="color:#fff;" href="./"># 2 - </a></b> <strong style="color:#fed42a;text-transform: uppercase;">M4A4 | Buzz Kill | StatTrak Factory New</strong></div>
+                                        <div class="feed-widget__date">Worth: 225,97€</div>
+                                      </div>
+                                    </div>
+                                    <div class="feed-widget__item feed-widget__item_chart">
+                                      <div class="feed-widget__ico"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                                      <div class="feed-widget__info">
+                                        <div class="feed-widget__text"><b><a style="color:#fff;" href="./"># 3 - </a></b> <strong style="color:#fed42a;text-transform: uppercase;">M4A4 | Buzz Kill | StatTrak Factory New</strong></div>
+                                        <div class="feed-widget__date">Worth: 225,97€</div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="width: 96px;"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="height: 96px;"></div></div></div></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                              <div class="panel panel-info">
+                                <div class="panel-heading">
+                                  <h3 class="panel-title">Rules &amp; Info</h3>
+                                </div>
+                                <div class="feed-widget" style="height: 250px;background-color: #2a2f34;">
+                                  <div class="scroll-wrapper feed-widget__wrap scrollable scrollbar-macosx" style="position: relative;"><div class="feed-widget__wrap scrollable scrollbar-macosx scroll-content" style="height: 252px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
+                                    <div class="feed-widget__cont">
+                                      <div class="feed-widget__list">
+                                        <div class="feed-widget__item feed-widget__item_user">
+                                          <div class="feed-widget__ico"><i class="fa fa-fw"></i></div>
+                                          <div class="feed-widget__info">
+                                            <div class="feed-widget__text"><b><a href="./">Gary Long</a></b> has registered.</div>
+                                            <div class="feed-widget__date">14:20 pm - 01.11.2016</div>
+                                          </div>
+                                        </div>
+                                        <div class="feed-widget__item feed-widget__item_product">
+                                          <div class="feed-widget__ico"><i class="fa fa-fw"></i></div>
+                                          <div class="feed-widget__info">
+                                            <div class="feed-widget__text">New product <b><a href="./">Sony PlayStation 4</a></b>.</div>
+                                            <div class="feed-widget__date">10:08 pm - 01.11.2016</div>
+                                          </div>
+                                        </div>
+                                        <div class="feed-widget__item feed-widget__item_product">
+                                          <div class="feed-widget__ico"><i class="fa fa-fw"></i></div>
+                                          <div class="feed-widget__info">
+                                            <div class="feed-widget__text">New product <b><a href="./">Sony PlayStation 4</a></b>.</div>
+                                            <div class="feed-widget__date">10:08 pm - 01.11.2016</div>
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div><div class="scroll-element scroll-x"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="width: 96px;"></div></div></div><div class="scroll-element scroll-y"><div class="scroll-element_outer"><div class="scroll-element_size"></div><div class="scroll-element_track"></div><div class="scroll-bar" style="height: 96px;"></div></div></div></div>
+                                </div>
+                              </div>
+                            </div>
+
+
+
+    </div>
+  </div>
+</div>
+<div class="col-md-3">
+                      <div class="panel panel-success">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Top 10</h3>
+                        </div>
+
+                        <div class="panel-body">
+                          <div class="ov-widget">
+                            <div class="ov-widget__list">
+                              <% for(var i = 0; i < top10.length; i++) { %>
+                              <div class="ov-widget__item ov-widget__item_inc">
+                                <div class="ov-widget__value" style="color:white;"># <%= numbers[i] %></div>
+                                <div class="ov-widget__value"><%= top10[i].title %></div>
+
+                                <div class="ov-widget__info">
+                                  <div class="ov-widget__title">Category: <%= top10[i].category %></div>
+                                  <div class="ov-widget__change"><span><%= top10[i].votes %></span><span class="fa fa-level-up"></span><span class="fa fa-level-down"></span><span class="fa fa-bolt"></span><span class="fa fa-thumb-tack"></span></div>
+
+                                </div>
+                              </div>
+                              <% } %>
+
+
+
+
+
+                              <div class="ov-widget__bar"><span>Voting Progress This Month</span>
+                                <div class="progress">
+                                  <div role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%" class="progress-bar progress-bar-info"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,60 @@
+<% layout('layouts/layout') -%>
+
+
+<div class="container-fluid half-padding">
+  <div class="pages pages_dashboard">
+    <div class="row">
+      <div class="col-md-12">
+                      <div class="panel panel-danger">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Overview</h3>
+                        </div>
+                        <div class="panel-body">
+
+              <% for(var i = 0; i < allGlobal.length; i++) { %>
+
+                          <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                              <div class="users-preview datalist-preview">
+                                <div class="users-preview__cont">
+                                  <div title="Kimberly Garza" class="users-preview__name"># <%= numbers[i] %> | <%= allGlobal[i].profile.name %></div>
+                                  <div class="users-preview__data">
+                                    <div class="users-preview__photo">
+                                      <div style=""><img class="moviemaker-img" src="<%= allGlobal[i].profile.picture %>" alt=""></div>
+                                    </div>
+                                    <div class="users-preview__info">
+
+                                      <div style="margin-bottom: 20px;" class="btn-group btn-group-sm">
+                                        <button type="button" class="btn btn-success">Donate</button>
+                                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-success dropdown-toggle"><span class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                          <li><a href="#">Trade Link</a></li>
+                                        </ul>
+                                      </div>
+                                      <div class="users-preview__position" style="color:#fff;width:240px;" title="Customer">Total FragStars:</div>
+
+                                      <div class="users-preview__edit">
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="users-preview__props">
+                                    <div title="Location" class="users-preview__prop"><i class="fa fa-map-marker"></i><span class="users-preview__location" title="Susaki">Susaki</span><i class="fa fa-calendar"></i><span class="users-preview__date" title="11/24/2015">11/24/2015</span></div>
+                                    <div title="Contact" class="users-preview__prop"><i class="fa fa-envelope"></i><span class="users-preview__contact" title="kgarza1@google.it">kgarza1@google.it</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+<% } %>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>

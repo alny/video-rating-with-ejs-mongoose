@@ -1,0 +1,53 @@
+<% layout('layouts/layout') -%>
+
+
+<div class="container-fluid half-padding">
+  <div class="pages pages_dashboard">
+    <div class="row">
+
+
+<% for(var i = 0; i < foundUpVoted.length; i++) { %>
+
+      <div class="col-md-2">
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <li class="dropdown" style="margin-bottom: -20px;">
+              <h3 style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"class="panel-title"><%= foundUpVoted[i].title %></h3>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="caret" style="position: relative;right: -223px;top: -22px;color:antiquewhite;"></i></a>
+              <ul class="dropdown-menu" style="top: 48%;left: 79px;!important">
+
+                    <li><a href="#"><span>By </span></a></li>
+
+                <% if(user) { %>
+                <li role="separator" class="divider"></li>
+                <li><a href="/report/<%= foundUpVoted[i].videoLink %>">Report</a></li>
+                <% } %>
+
+              </ul>
+            </li>
+          </div>
+          <span data-id="<%= foundUpVoted[i].videoLink %>" data-thumbnail="maxresdefault" data-target="magnificPopup" class="demo02"></span>
+
+<div class="wrapper-rating">
+          <div class="sp-widget__info" style="margin-bottom:10px;">
+          <div class="sp-widget__title"><i style="margin-left:15px;color:#eb3232;margin-right:10px;" class="fa fa-crosshairs"></i><span class="frag-style"><%= foundUpVoted[i].category %></span></div>
+          </div>
+
+
+          <a href="/upVote/<%= foundUpVoted[i].videoLink %>" name="" type="button" style="margin-bottom:8px;padding: 2px 6px 2px 6px;" class="btn btn-success"><i class="fa fa-heart" style="font-size:14px;" aria-hidden="true"></i></a>
+
+          <a href="/starVote/<%= foundUpVoted[i].videoLink %>" name="" type="button" style="margin-bottom:8px;padding: 2px 6px 2px 6px;" class="btn btn-info"><i class="fa fa-star" style="font-size:14px;" aria-hidden="true"></i></a>
+
+
+          <a type="button" href="/downVote/<%= foundUpVoted[i].videoLink %>" name="downVote" style="margin-bottom:8px;padding: 2px 6px 2px 6px;" class="btn btn-danger"><i class="fa fa-remove" style="font-size:14px;" aria-hidden="true"></i></a>
+</div>
+
+
+        </div>
+      </div>
+<% } %>
+
+
+    </div>
+  </div>
+</div>

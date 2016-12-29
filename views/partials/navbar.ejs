@@ -1,0 +1,147 @@
+<nav class="navbar navbar-static-top header-navbar">
+  <div class="header-navbar-mobile">
+    <div class="header-navbar-mobile__menu">
+      <button type="button" class="btn"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="header-navbar-mobile__title"><span>Dashboard</span></div>
+    <div class="header-navbar-mobile__settings dropdown"><a href="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn dropdown-toggle"><i class="fa fa-power-off"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-header"><a href="/" class="navbar-brand">
+      <div class="logo text-nowrap">
+        <div class="logo__img"><i class="fa fa-foursquare"></i></div><span class="logo__text">RAG<strong>R</strong>ATER</span>
+      </div></a></div>
+  <div class="topnavbar">
+    <ul class="nav navbar-nav navbar-left">
+      <li class="active"><a href="/dashboard"><i class="fa fa-angle-double-right" aria-hidden="true"></i><span>Watch &amp; Rate Frags</span></a></li>
+      <li><a href="/global-top"><span>Global Highest Rated</span><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+      <li><a href="/top-fragmovies"><span>Top Rated FragStars</span><i class="fa fa-star-half-o" aria-hidden="true"></i></a></li>
+      <li><a href="/top-fragmovies"><span>Top FragMovies</span><i class="fa fa-television" aria-hidden="true"></i></a></li>
+      <li><a href="#"><span>Hall Of Fame</span><i class="fa fa-diamond" aria-hidden="true"></i></a></li>
+      <li><a href="#"><span>Awards &amp; Prices</span><i class="fa fa-trophy" aria-hidden="true"></i></a></li>
+
+    </ul>
+    <% if (user) { %>
+    <ul class="userbar nav navbar-nav">
+      <li><img src="<%= user.profile.picture %>" class="my-picture"></li>
+      <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><span><%= user.profile.name %>&nbsp;<i class="caret"></i></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#"><span>Profile</span></a></li>
+          <li><a href="#"><span>My Frags</span></a></li>
+          <li><a href="#"><span>Awards</span></a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#"><span>Rules</span></a></li>
+          <li><a href="#"><span>Support</span></a></li>
+          <li><a href="#"><span>General Info</span></a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </li>
+      <li class="dropdown"><a href="/logout" role="button" class="userbar__settings dropdown-toggle"><i class="fa fa-power-off"></i></a></li>
+        <% } else { %>
+          <div class="social-div">
+            <a href="/auth/facebook" id="social-facebook" class="btn btn-block btn-social btn-facebook">
+            <span class="fa fa-facebook"></span> Sign in with Facebook
+            </a>
+          </div>
+          <!--
+          <div class="social-div">
+            <a href="/auth/facebook" id="social-steam" class="btn btn-block btn-social btn-github">
+            <span class="fa fa-steam"></span> Sign in with Steam
+            </a>
+          </div>-->
+          <% } %>
+
+    </ul>
+  </div>
+</nav>
+<div class="dashboard">
+  <div class="sidebar">
+    <div class="logo-div">
+      <img src="img/delicious_tears_GLASS_vector.png" class="logo-style">
+
+    </div>
+
+    <div class="quickmenu">
+      <div class="quickmenu__cont" style="background-color: #272c30;">
+        <div class="quickmenu__list">
+          <div class="quickmenu__item active">
+            <a style="color:#fff;" href="/"><div class="fa fa-fw fa-home"></div></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="scrollable scrollbar-macosx">
+      <div class="sidebar__cont">
+        <div class="sidebar__menu">
+          <div class="sidebar__title">Monthly Top Frags</div>
+          <ul class="nav nav-menu">
+            <li><a href="/top-aces">
+                <div class="nav-menu__ico"><i class="fa fa-fw fa-star"></i></div>
+                <div class="nav-menu__text"><span>Top Aces</span><span style="margin-left:15px;" class="label label-danger">Crazy</span></div></a></li>
+            <li><a href="/top-clutches">
+                <div class="nav-menu__ico"><i class="fa fa-magic"></i></div>
+                <div class="nav-menu__text"><span>Top Clutches</span></div></a></li>
+            <li><a href="/top-ninjas">
+                <div class="nav-menu__ico"><i class="fa fa-odnoklassniki"></i></div>
+                <div class="nav-menu__text"><span>Top Ninjas</span></div>
+              </a>
+
+            </li>
+            <li><a href="/top-pistol">
+                <div class="nav-menu__ico"><i class="fa fa-hand-o-right"></i></div>
+                <div class="nav-menu__text"><span>Top Pistol</span><span style="margin-left:15px;" class="label label-info">Insane</span></div>
+                </a></li>
+            <li><a href="/top-pros">
+                <div class="nav-menu__ico"><i class="fa fa-free-code-camp"></i></div>
+                <div class="nav-menu__text"><span>Top Pros</span></div></a></li>
+            <li><a href="/top-funny">
+                <div class="nav-menu__ico"><i class="fa fa-reddit-alien"></i></div>
+                <div class="nav-menu__text"><span>Top Funny</span></div>
+                </a>
+
+            </li>
+          </ul>
+          <div class="sidebar__title">Fragmovie Section </div>
+          <ul class="nav nav-menu">
+            <li><a href="#">
+                <div class="nav-menu__ico"><i class="fa fa-hand-spock-o"></i></div>
+                <div class="nav-menu__text"><span>Watch &amp; Rate</span><span style="margin-left:10px;" class="label label-success"><i class="fa fa-eye" aria-hidden="true"></i></span></div></a></li>
+            <li><a href="/top-aces">
+                <div class="nav-menu__ico"><i class="fa fa-gamepad"></i></div>
+                <div class="nav-menu__text"><span>Top Edits</span></div></a></li>
+            <li><a href="/top-clutches">
+                <div class="nav-menu__ico"><i class="fa fa-bomb"></i></div>
+                <div class="nav-menu__text"><span>Top Highlights</span></div></a></li>
+
+          </ul>
+          <% if (user) { %>
+          <div class="sidebar__title">My Section</div>
+          <ul class="nav nav-menu">
+            <li><a href="/my-frags">
+                <div class="nav-menu__ico"><i class="fa fa-th-large"></i></div>
+                <div class="nav-menu__text"><span>My Frags</span></div>
+                </a>
+            </li>
+            <li><a href="/submit">
+                <div class="nav-menu__ico"><i class="fa fa-cloud-upload"></i></div>
+                <div class="nav-menu__text"><span>Submit Frag</span><span style="margin-left:5px;" class="label label-primary">Win</span></div>
+                </a>
+            </li>
+
+          </ul>
+          <% } %>
+
+
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>

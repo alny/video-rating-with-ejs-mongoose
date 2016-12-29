@@ -1,0 +1,61 @@
+<script src="js/classie.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Mainly scripts
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.min.js"></script>
+
+
+<!-- Custom and plugin javascript -->
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<script src="js/jquery.magnific-popup.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+
+
+<script src="js/jquery.lazytube.js"></script>
+
+
+
+
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js"></script>
+
+
+<script>
+
+
+  jQuery(document).ready(function($) {
+
+        $('.demo01, .demo02, .demo03, .demo04').lazyTube({
+            targetHandlers: {
+                magnificPopup: function(options, params) {
+                    $.magnificPopup.open({
+                        items: [{
+                            src: 'https://www.youtube.com/watch/?v=' + params.id + '?showinfo=0&;rel=0&autoplay=1;',
+                            type: 'iframe'
+                        }]
+                    });
+                }
+            }
+        });
+    });
+
+</script>

@@ -1,0 +1,30 @@
+<% layout('layouts/layout') -%>
+
+    <div class="container-fluid half-padding">
+        <div class="pages pages_dashboard">
+            <div class="row">
+
+                <% for(var i = 0; i < owner.length; i++) { %>
+                    <div class="col-md-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                              <h3 class="panel-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><%= owner[i].title %></h3>
+
+                            </div>
+                            <span data-id="<%= owner[i].videoLink %>" data-target="magnificPopup" data-thumbnail="maxresdefault" class="demo01"></span>
+
+                            <div class="btn-group btn-group-sm" style="margin-left: 13px;margin-bottom: 9px;">
+                                <button href="/edit-frag" type="button" class="btn btn-primary">Actions</button>
+                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-primary dropdown-toggle"><span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/edit-frag/<%= owner[i].videoLink %>">Edit</a></li>
+                                    <li><a href="/delete/<%= owner[i].videoLink %>">Delete</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
